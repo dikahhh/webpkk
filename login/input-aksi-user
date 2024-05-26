@@ -1,0 +1,12 @@
+<?php 
+include 'koneksi.php';
+
+$id       = $_POST ['id']
+$username = $_POST ['username'];
+$password = $_POST ['password'];
+$level = $_POST ['level'];
+
+
+mysqli_query($koneksi,"insert into user values('$id', '$username','$password', '$level')");
+header("location:user.php");
+?>
